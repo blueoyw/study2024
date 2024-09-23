@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
+#include "Procotol/addressbook.pb.h"
 
 using namespace std;
 
@@ -11,6 +12,11 @@ int main()
     std::cout << "Hello World!\n"; 
 	cout << "second commit\n";
 	cout << "test";
+	tutorial::Person person;
+	person.set_id(10);
+	cout << person.GetTypeName() << person.id() << "\n";
+
+	return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
