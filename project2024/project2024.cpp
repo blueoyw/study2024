@@ -3,9 +3,23 @@
 
 #include "pch.h"
 #include <iostream>
+#include <boost/asio.hpp>
 #include "Procotol/addressbook.pb.h"
 
 using namespace std;
+using namespace boost::asio;
+
+void handler(const boost::system::error_code& error)
+{
+	if (!error)
+	{
+		cout << "5 seconds past" << endl;
+	}
+	else
+	{
+		cout << "Error:" << error.message() << endl;
+	}
+}
 
 int main()
 {
@@ -15,6 +29,14 @@ int main()
 	tutorial::Person person;
 	person.set_id(10);
 	cout << person.GetTypeName() << person.id() << "\n";
+
+	io_service ios;
+	
+	boost::asio::steady_timer t(ios, boost::asio::chrono::seconds(5));
+	t.async_wait(handler);
+	cout << "before run" << endl;
+
+	ios.run();
 
 	return 0;
 }
