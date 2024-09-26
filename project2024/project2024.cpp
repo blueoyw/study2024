@@ -21,7 +21,7 @@ void handler(const boost::system::error_code& error)
 	}
 }
 
-int main()
+int main(int argc, int argv[])
 {
     std::cout << "Hello World!\n"; 
 	cout << "second commit\n";
