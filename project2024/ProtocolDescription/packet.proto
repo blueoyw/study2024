@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package Packet;
+
+enum PacketId {
+  NONE = 0;
+  REQ_LOGIN = 1;
+  RES_LOGIN = 2;
+}
+
+message ReqHeader {
+  PacketId packetId = 1;
+  int32 length = 2;
+}
+
+message ResHeader {
+  PacketId packetId = 1;
+  int32 error = 2;
+  int32 length = 3;
+}
+
+message ReqLogin {
+  ReqHeader header = 1;
+  int32 id = 2;
+  string name = 3;
+}
+
+message ResLogin {
+  ResHeader header = 1;
+  int32 id = 2;
+  string name = 3;
+}
