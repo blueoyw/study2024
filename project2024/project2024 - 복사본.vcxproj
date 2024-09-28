@@ -161,6 +161,8 @@
   <ItemGroup>
     <ClInclude Include="com.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Procotol\addressbook.pb.h" />
+    <ClInclude Include="Procotol\test.pb.h" />
     <ClInclude Include="Net\Session.h" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +172,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Procotol\addressbook.pb.cc" />
+    <ClCompile Include="Procotol\test.pb.cc" />
     <ClCompile Include="project2024.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

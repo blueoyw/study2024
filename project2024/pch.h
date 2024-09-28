@@ -10,5 +10,9 @@
 #define PCH_H
 
 // TODO: 여기에 미리 컴파일하려는 헤더 추가
+#include "com.h"
+#include <string>
+#include <iostream>
+#include <functional>
 
 #endif //PCH_H

@@ -4,7 +4,6 @@
 #include "pch.h"
 #include <iostream>
 #include <boost/asio.hpp>
-#include "Procotol/addressbook.pb.h"
 
 using namespace std;
 using namespace boost::asio;
@@ -26,9 +25,6 @@ int main(int argc, int argv[])
     std::cout << "Hello World!\n"; 
 	cout << "second commit\n";
 	cout << "test";
-	tutorial::Person person;
-	person.set_id(10);
-	cout << person.GetTypeName() << person.id() << "\n";
 
 	io_service ios;
 	
@@ -37,7 +33,5 @@ int main(int argc, int argv[])
 	cout << "before run" << endl;
 
 	ios.run();
-
-	//BOOST_LOG_TRIVIAL(info) << "test end";
 	return 0;
 }
