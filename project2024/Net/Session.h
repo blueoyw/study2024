@@ -2,11 +2,12 @@
 #include "../pch.h"
 
 using namespace std;
-namespace net {
-	enum ClseReason
+namespace net 
+{
+	enum CloseReason
 	{
 		ActiveClose = 0,
-		Disconnected,
+		Disconnected = 1,
 		TimeOut
 	};
 
@@ -30,7 +31,8 @@ namespace net {
 	};
 
 	using SessionOpenHandler = function<void(const Ptr<Session>&)>;
-
+	using SessionCloseHandler = function<void(const Ptr<Session>&, const CloseReason& cr)>;
+	using MessageHandler = function<void(const Ptr<Session>&)>;
 }
 
 

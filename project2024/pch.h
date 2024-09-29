@@ -14,5 +14,8 @@
 #include <string>
 #include <iostream>
 #include <functional>
+#include "Net/Session.h"
+#include "Net/ClientConfig.h"
+#include "Net/ServerConfig.h"
 
 #endif //PCH_H

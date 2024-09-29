@@ -160,8 +160,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="com.h" />
+    <ClInclude Include="Net\ClientConfig.h" />
+    <ClInclude Include="Net\Server.h" />
+    <ClInclude Include="Net\ServerConfig.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Net\Session.h" />
+    <ClInclude Include="Net\TcpSession.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -171,6 +175,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="project2024.cpp" />
+    <ClCompile Include="Net\TcpSession.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
